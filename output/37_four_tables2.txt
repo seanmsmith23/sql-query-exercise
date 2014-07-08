@@ -1,0 +1,5 @@
+exercisedb=# SELECT SUM(amount), customers.name  FROM orderitems JOIN orders ON (orderitems.order_id = orders.id) JOIN customers ON (orders.customer_id = customers.id AND customers.name = 'Evert Pfeffer') JOIN items ON (orderitems.item_id = items.id AND items.name = 'bike03') GROUP BY customers.name;
+  sum   |     name
+--------+---------------
+ 198.47 | Evert Pfeffer
+(1 row)

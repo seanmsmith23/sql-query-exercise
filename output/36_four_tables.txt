@@ -1,0 +1,13 @@
+exercisedb=# SELECT customers.name FROM orderitems JOIN orders ON (orderitems.order_id = orders.id) JOIN customers ON (orders.customer_id = customers.id) JOIN items ON (orderitems.item_id = items.id AND items.name = 'bike03') GROUP BY customers.name;
+         name
+----------------------
+ Donato Rempel
+ Ms. Sofia Rowe
+ Evert Pfeffer
+ Tyrell Von DDS
+ Wilhelmine Huels
+ Hulda Will III
+ Elta Dicki
+ Edna Hintz
+ Coleman Prohaska Jr.
+(9 rows)

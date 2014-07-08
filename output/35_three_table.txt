@@ -1,0 +1,25 @@
+exercisedb=# SELECT orders.customer_id FROM orderitems JOIN orders ON (orderitems.order_id = orders.id) JOIN items ON (orderitems.item_id = items.id AND items.name = 'boot02');
+ customer_id
+-------------
+           5
+           7
+           4
+           3
+           1
+           6
+           3
+          10
+           7
+          10
+           4
+           3
+           5
+           4
+           5
+           8
+           8
+           5
+(18 rows)
+
+
+exercisedb=# SELECT customers.name FROM orderitems JOIN (SELECT * FROM orders JOIN customers ON (orders.customer_id = customers.id)) ON
